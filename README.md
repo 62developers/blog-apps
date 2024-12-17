@@ -1,2 +1,2 @@
 # blog-apps
-blog - websites
+62 - Blog | News

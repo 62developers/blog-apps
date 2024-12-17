@@ -1,0 +1,19 @@
+---
+import BaseLayout from "./base.astro";
+import ViewListHeader from "~/components/shared/view-list-header.astro";
+import type { ArticleMeta, Meta } from "~/lib/types";
+
+type Props = {
+  header: string;
+  meta: ArticleMeta | Meta
+};
+
+const props = Astro.props;
+---
+
+<BaseLayout {...props.meta}>
+  <div class="container flex flex-col h-full pb-8 pt-4" data-pagefind-ignore="all">
+    <ViewListHeader title={props.header} />
+    <slot />
+  </div>
+</BaseLayout>
